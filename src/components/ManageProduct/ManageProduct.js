@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt, faEdit} from '@fortawesome/free-solid-svg-icons'
 
 const ManageProduct = () => {
     const [products, setProducts] = useState([]);
-    const [allProduct, setAllProduct] = useState()
 
     useEffect(() => {
         fetch('https://protected-beach-00185.herokuapp.com/products')
@@ -19,28 +17,12 @@ const ManageProduct = () => {
         })
         .then(res => res.json())
         .then(result =>{
-         console.log(result)
-           
+         console.log(result)   
         })
-     
     }
       
     return (
-        <div className="row">
-            <div className=" bg-success">
-                <nav className="nav col-md-3">
-                    <ul>
-                        <li>
-                            <Link to="/addProducts">addProducts </Link>
-                        </li>
-                        <li>
-                            <Link to="/manageProduct">ManageProduct</Link>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-
+        <div className="row text-center">
             <table class="table table-dark table-striped col-md-7">
                 <thead>
                     <tr>
@@ -67,7 +49,3 @@ const ManageProduct = () => {
 };
 
 export default ManageProduct;
-
-// {
-//     products.map(product => <AllProducts product={product}></AllProducts>)
-// }

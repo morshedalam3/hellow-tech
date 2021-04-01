@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div>
+        <div className="text-center">
              <div>
             
             <nav className="nav">
@@ -18,7 +18,7 @@ const Header = () => {
                         <Link to="/order">Order</Link>
                     </li>
                     <li>
-                        <Link to="/manageProduct">Admin</Link>
+                        <Link to="/admin">Admin</Link>
                     </li>
                     <li>
                         <Link  to="/contact">Deals</Link>
@@ -26,10 +26,6 @@ const Header = () => {
                     <li>
                         <Link to="/login">Login</Link>
                     </li>
-                    {/* <li>
-                        <Link to="/addProducts">addProducts</Link>
-                    </li> */}
-                   
                 </ul>
             </nav>
         </div>
