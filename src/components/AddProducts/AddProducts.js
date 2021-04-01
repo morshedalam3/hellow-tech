@@ -12,7 +12,7 @@ const AddProducts = () => {
             price: data.price,
             imageUrl: imageUrl
         }
-        const url = `http://localhost:8080/addProducts`
+        const url = `https://protected-beach-00185.herokuapp.com/addProducts`
 
         console.log(productData);
         
@@ -43,13 +43,13 @@ const AddProducts = () => {
 
     }
     return (
-        <div>
+        <div className="container col-md-6">
              <form onSubmit={handleSubmit(onSubmit)}>
-                <input className="form-control" name="name" defaultValue="Enter name" ref={register} /> 
-                <input className="form-control" name="brand" defaultValue="Enter brand" ref={register} /> 
-                <input className="form-control" name="price" defaultValue="Enter price" ref={register} /> 
+                <input className="form-control" name="name" defaultValue="Enter name" ref={register} /> <br/>
+                <input className="form-control" name="brand" defaultValue="Enter brand" ref={register} /> <br/>
+                <input type="number" className="form-control" name="price" placeholder="Enter price" ref={register} /> <br/>
                 <input className="form-control" name="upload Image" type="file" onChange={handleImageUpload}  /> <br/>
-                <input type="submit"/>
+                <input className="btn btn-success" type="submit"/>
             </form>
         </div>
     );

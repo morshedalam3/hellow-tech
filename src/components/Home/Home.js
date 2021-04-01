@@ -5,12 +5,12 @@ const Home = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8080/products')
+        fetch('https://protected-beach-00185.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])
     return (
-        <div className="text-center row">
+        <div className="row">
         {
             products.map(product =><Product product={product}></Product>)
         }
