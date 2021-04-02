@@ -5,6 +5,7 @@ import { UserContext } from '../../App';
 const Checkout = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const { _id } = useParams();
+    const orderTime = new Date().toLocaleString();
 
     const [products, setProducts] = useState([]);
 

@@ -8,9 +8,9 @@ const Product = ({product}) => {
     }
     return (
         <div className=" col-md-3 ms-3 my-3">
-        <img style={{height: '300px', width: '400px'}} className="img-fluid" src={product.imageUrl} alt=""/>
+        <img className="img-fluid" src={product.imageUrl} alt=""/>
         <h3 className="text-center">{product.name} <br/>
-        <span className="ms-3">${product.price}</span> <button className="btn btn-success" onClick={() => handleBuy(product._id)}>Buy Now</button></h3>  
+        <span style={{float: 'left', marginLeft:'20px'}}>${product.price}</span> <button style={{float:"right", marginRight:'20px'}} className=" btn btn-success" onClick={() => handleBuy(product._id)}>Buy Now</button></h3>  
     </div>
     );
 };
