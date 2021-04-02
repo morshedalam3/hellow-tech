@@ -22,8 +22,9 @@ const ManageProduct = () => {
     }
       
     return (
-        <div className="row text-center">
-            <table class="table table-dark table-striped col-md-7">
+        <div className="container">
+        <div className="row">
+            <table class="table table-dark table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Product Name</th>
@@ -43,7 +44,7 @@ const ManageProduct = () => {
                     }
                 </tbody>
             </table>
-
+            </div>
         </div>
     );
 };

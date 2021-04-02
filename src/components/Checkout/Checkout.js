@@ -56,7 +56,11 @@ const Checkout = () => {
       <td>{product.price}</td>
     </tr>
   </tbody>
-</table>:''}
+</table>:<div class="d-flex justify-content-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden"></span>
+                    </div>
+                </div>}
     <div>
     <button onClick={handleOrder} className="btn btn-success">Checkout</button>
     </div>
