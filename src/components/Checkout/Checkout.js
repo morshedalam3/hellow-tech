@@ -19,7 +19,7 @@ const Checkout = () => {
     console.log(product)
 
     const handleOrder = () => {
-        const orderDetails = {...loggedInUser, products: product, orderTime: new Date() }
+        const orderDetails = {...loggedInUser, products: product, orderTime }
         fetch('https://protected-beach-00185.herokuapp.com/adOrder', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
@@ -63,7 +63,7 @@ const Checkout = () => {
                     </div>
                 </div>}
     <div>
-    <button onClick={handleOrder} className="btn btn-success">Checkout</button>
+    <button style={{float: 'right', marginTop:'25px'}} onClick={handleOrder} className="btn btn-success">Checkout</button>
     </div>
 
        </div>

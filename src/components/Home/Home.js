@@ -18,11 +18,13 @@ const Home = () => {
                         <span class="visually-hidden"></span>
                     </div>
                 </div>
-                :
-                <div className="row text-center">
+                :<div className="container">
+                    <div className="row">
                     {
                         products.map(product => <Product product={product}></Product>)
                     }
+                    </div>
+                    
                 </div>}
 
         </div>

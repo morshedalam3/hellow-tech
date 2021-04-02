@@ -7,7 +7,7 @@ const Header = () => {
         <div className="text-center">
              <div>
             
-            <nav className="nav">
+            <nav className="nav topnav" id="myTopnav">
                 <ul>
                
                 <li className='title-container'>Hello Tech</li>

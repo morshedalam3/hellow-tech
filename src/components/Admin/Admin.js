@@ -10,7 +10,6 @@ import { faBorderAll, faPlus} from '@fortawesome/free-solid-svg-icons'
 import AddProducts from '../AddProducts/AddProducts';
 import ManageProduct from '../ManageProduct/ManageProduct';
 
-
 const Admin = () => {
     return (
         <Router>
@@ -22,7 +21,6 @@ const Admin = () => {
               <FontAwesomeIcon icon={faPlus} /> <Link to="/addProduct">AddProduct</Link>
               </h5>
           </nav>
-  
           <Switch>
             <Route path="/manageProduct">
             <ManageProduct/>
@@ -31,7 +29,6 @@ const Admin = () => {
             <AddProducts/>
             </Route>
           </Switch>
-       
       </Router>
     );
 };
